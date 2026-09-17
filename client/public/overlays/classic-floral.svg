@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <!-- Classic Floral & Lotus Mehndi Motif -->
+  <g stroke="#6B3E26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sacred Lotus Center -->
+    <path d="M250 180 C230 220, 240 250, 250 260 C260 250, 270 220, 250 180 Z" fill="#6B3E26" fill-opacity="0.4" stroke-width="3"/>
+    <path d="M250 260 C230 250, 205 230, 215 200 C235 220, 240 245, 250 260 Z" fill="#6B3E26" fill-opacity="0.3"/>
+    <path d="M250 260 C270 250, 295 230, 285 200 C265 220, 260 245, 250 260 Z" fill="#6B3E26" fill-opacity="0.3"/>
+    
+    <!-- Outer Lotus Petals -->
+    <path d="M250 260 C215 260, 185 235, 195 220 C215 235, 235 250, 250 260 Z" fill="#6B3E26" fill-opacity="0.2"/>
+    <path d="M250 260 C285 260, 315 235, 305 220 C285 235, 265 250, 250 260 Z" fill="#6B3E26" fill-opacity="0.2"/>
+
+    <!-- Lotus Calyx base -->
+    <path d="M210 270 Q250 290 290 270" stroke-width="3.5"/>
+    <path d="M200 280 Q250 305 300 280" stroke-width="2"/>
+    <circle cx="250" cy="305" r="4" fill="#6B3E26"/>
+
+    <!-- Winding Garland Leaves -->
+    <path d="M250 310 C220 350, 200 390, 180 430" stroke-width="3"/>
+    <path d="M250 310 C280 350, 300 390, 320 430" stroke-width="3"/>
+    
+    <path d="M210 350 C180 340, 190 370, 220 365 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M290 350 C320 340, 310 370, 280 365 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M190 400 C160 390, 170 420, 200 415 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M310 400 C340 390, 330 420, 300 415 Z" fill="#6B3E26" fill-opacity="0.5"/>
+  </g>
+</svg>

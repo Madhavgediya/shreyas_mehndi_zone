@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <!-- Central Mehndi Mandala Overlay -->
+  <g stroke="#6B3E26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="#6B3E26" fill-opacity="0.15">
+    <!-- Center flower -->
+    <circle cx="250" cy="250" r="16" fill="#6B3E26"/>
+    <circle cx="250" cy="250" r="28" stroke-dasharray="4 4"/>
+    
+    <!-- Inner Petals -->
+    <path d="M250 216 Q262 230 250 250 Q238 230 250 216 Z" fill="#6B3E26"/>
+    <path d="M250 284 Q262 270 250 250 Q238 270 250 284 Z" fill="#6B3E26"/>
+    <path d="M216 250 Q230 262 250 250 Q230 238 216 250 Z" fill="#6B3E26"/>
+    <path d="M284 250 Q270 262 250 250 Q270 238 284 250 Z" fill="#6B3E26"/>
+    <path d="M226 226 Q242 234 250 250 Q234 242 226 226 Z" fill="#6B3E26"/>
+    <path d="M274 226 Q258 234 250 250 Q266 242 274 226 Z" fill="#6B3E26"/>
+    <path d="M226 274 Q242 266 250 250 Q234 258 226 274 Z" fill="#6B3E26"/>
+    <path d="M274 274 Q258 266 250 250 Q266 258 274 274 Z" fill="#6B3E26"/>
+
+    <!-- Concentric Rings -->
+    <circle cx="250" cy="250" r="54" stroke-width="3"/>
+    <circle cx="250" cy="250" r="62" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <circle cx="250" cy="250" r="75" stroke-width="2"/>
+
+    <!-- Scalloped Layer 1 -->
+    <path d="M250 175 Q265 160 280 175 Q295 160 310 178 Q325 195 325 215 Q340 230 325 250 Q340 270 325 285 Q325 305 310 322 Q295 340 280 325 Q265 340 250 325 Q235 340 220 325 Q205 340 190 322 Q175 305 175 285 Q160 270 175 250 Q160 230 175 215 Q175 195 190 178 Q205 160 220 175 Q235 160 250 175 Z" fill="#8B5E3C" fill-opacity="0.2" stroke-width="3"/>
+
+    <!-- Outer Jali Lace & Paisleys -->
+    <circle cx="250" cy="250" r="110" stroke-width="3"/>
+    <circle cx="250" cy="250" r="120" stroke-width="1.5" stroke-dasharray="5 4"/>
+    
+    <!-- 8 Radiating Paisley Leaves -->
+    <path d="M250 130 C270 90, 310 95, 290 135 C275 160, 250 150, 250 130 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M250 370 C270 410, 310 405, 290 365 C275 340, 250 350, 250 370 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M130 250 C90 270, 95 310, 135 290 C160 275, 150 250, 130 250 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M370 250 C410 270, 405 310, 365 290 C340 275, 350 250, 370 250 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    
+    <path d="M165 165 C140 130, 160 100, 185 135 C200 155, 185 175, 165 165 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M335 165 C360 130, 340 100, 315 135 C300 155, 315 175, 335 165 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M165 335 C140 370, 160 400, 185 365 C200 345, 185 325, 165 335 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M335 335 C360 370, 340 400, 315 365 C300 345, 315 325, 335 335 Z" fill="#6B3E26" fill-opacity="0.5"/>
+
+    <!-- Pearl Beads Ring -->
+    <circle cx="250" cy="80" r="5" fill="#6B3E26"/>
+    <circle cx="250" cy="420" r="5" fill="#6B3E26"/>
+    <circle cx="80" cy="250" r="5" fill="#6B3E26"/>
+    <circle cx="420" cy="250" r="5" fill="#6B3E26"/>
+  </g>
+</svg>

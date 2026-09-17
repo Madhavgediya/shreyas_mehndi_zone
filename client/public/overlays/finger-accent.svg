@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 500" width="200" height="500" fill="none">
+  <!-- Delicate Finger & Ring Henna Pattern -->
+  <g stroke="#6B3E26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Fingertip cap -->
+    <path d="M70 50 C70 20, 130 20, 130 50 L130 80 C115 90, 85 90, 70 80 Z" fill="#6B3E26" fill-opacity="0.7" stroke-width="2.5"/>
+    <circle cx="100" cy="100" r="3" fill="#6B3E26"/>
+    <circle cx="100" cy="112" r="2" fill="#6B3E26"/>
+    
+    <!-- Knuckle band 1 -->
+    <path d="M60 140 L140 140" stroke-width="2"/>
+    <path d="M60 148 L140 148" stroke-width="1" stroke-dasharray="3 2"/>
+    <path d="M60 156 L140 156" stroke-width="2"/>
+    
+    <!-- Knuckle leafy chevron -->
+    <path d="M100 156 L80 180 L100 200 L120 180 Z" fill="#6B3E26" fill-opacity="0.3"/>
+    <circle cx="100" cy="180" r="3" fill="#6B3E26"/>
+
+    <!-- Trailing ring chain -->
+    <path d="M100 200 C110 240, 90 280, 100 320" stroke-width="2" stroke-dasharray="4 4"/>
+
+    <!-- Ring Motif -->
+    <circle cx="100" cy="330" r="12" stroke-width="2.5" fill="#6B3E26" fill-opacity="0.2"/>
+    <circle cx="100" cy="330" r="5" fill="#6B3E26"/>
+    <path d="M100 310 Q115 320 100 330 Q85 320 100 310 Z" fill="#6B3E26"/>
+    <path d="M100 350 Q115 340 100 330 Q85 340 100 350 Z" fill="#6B3E26"/>
+
+    <!-- Base band -->
+    <path d="M50 400 L150 400" stroke-width="3"/>
+    <path d="M50 410 L150 410" stroke-width="1.5"/>
+    <path d="M50 420 C60 435, 75 435, 85 420 C95 435, 105 435, 115 420 C125 435, 140 435, 150 420" fill="#6B3E26" fill-opacity="0.3"/>
+  </g>
+</svg>

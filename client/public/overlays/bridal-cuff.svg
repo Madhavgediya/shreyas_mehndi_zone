@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400" fill="none">
+  <!-- Bridal Wrist Cuff & Jali Pattern Overlay -->
+  <g stroke="#6B3E26" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Top Decorative Band -->
+    <path d="M50 100 L450 100" stroke-width="4"/>
+    <path d="M50 115 L450 115" stroke-width="2"/>
+    <path d="M50 125 L450 125" stroke-width="1.5" stroke-dasharray="6 4"/>
+    
+    <!-- Scallop Beads -->
+    <path d="M50 135 C65 155, 85 155, 100 135 C115 155, 135 155, 150 135 C165 155, 185 155, 200 135 C215 155, 235 155, 250 135 C265 155, 285 155, 300 135 C315 155, 335 155, 350 135 C365 155, 385 155, 400 135 C415 155, 435 155, 450 135" fill="#6B3E26" fill-opacity="0.25" stroke-width="2.5"/>
+
+    <!-- Intricate Jali Net Grid -->
+    <g stroke-width="1.5" stroke="#6B3E26" stroke-opacity="0.8">
+      <line x1="80" y1="140" x2="220" y2="280"/>
+      <line x1="120" y1="140" x2="260" y2="280"/>
+      <line x1="160" y1="140" x2="300" y2="280"/>
+      <line x1="200" y1="140" x2="340" y2="280"/>
+      <line x1="240" y1="140" x2="380" y2="280"/>
+      <line x1="280" y1="140" x2="420" y2="280"/>
+
+      <line x1="420" y1="140" x2="280" y2="280"/>
+      <line x1="380" y1="140" x2="240" y2="280"/>
+      <line x1="340" y1="140" x2="200" y2="280"/>
+      <line x1="300" y1="140" x2="160" y2="280"/>
+      <line x1="260" y1="140" x2="120" y2="280"/>
+      <line x1="220" y1="140" x2="80" y2="280"/>
+    </g>
+
+    <!-- Center Jali Dots -->
+    <circle cx="200" cy="210" r="3.5" fill="#6B3E26"/>
+    <circle cx="250" cy="210" r="3.5" fill="#6B3E26"/>
+    <circle cx="300" cy="210" r="3.5" fill="#6B3E26"/>
+    <circle cx="225" cy="185" r="3.5" fill="#6B3E26"/>
+    <circle cx="275" cy="185" r="3.5" fill="#6B3E26"/>
+    <circle cx="225" cy="235" r="3.5" fill="#6B3E26"/>
+    <circle cx="275" cy="235" r="3.5" fill="#6B3E26"/>
+
+    <!-- Bottom Finishing Bands -->
+    <path d="M50 280 L450 280" stroke-width="2"/>
+    <path d="M50 295 L450 295" stroke-width="4"/>
+
+    <!-- Suspended Paisley Drops -->
+    <path d="M150 295 C140 330, 160 350, 150 370 C140 350, 120 330, 150 295 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M250 295 C240 340, 260 360, 250 385 C240 360, 220 340, 250 295 Z" fill="#6B3E26" fill-opacity="0.5"/>
+    <path d="M350 295 C340 330, 360 350, 350 370 C340 350, 320 330, 350 295 Z" fill="#6B3E26" fill-opacity="0.5"/>
+  </g>
+</svg>

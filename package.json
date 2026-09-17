@@ -1,0 +1,29 @@
+{
+  "name": "shreyas-mehndi-zone",
+  "version": "1.0.0",
+  "description": "Production-ready MERN Stack platform for Shreya's Mehndi Zone - Mehndi Artist Portfolio, Virtual Try-On, and Appointment Booking",
+  "main": "server/server.js",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client run build",
+    "install-all": "npm install && npm --prefix server install && npm --prefix client install",
+    "seed": "node server/seed/seedData.js"
+  },
+  "keywords": [
+    "mehndi",
+    "henna",
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "virtual-try-on",
+    "bridal-mehndi"
+  ],
+  "author": "Shreya Gediya",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
