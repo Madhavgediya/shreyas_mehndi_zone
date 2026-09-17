@@ -3,6 +3,7 @@ import AdminLayout from '../../components/admin/AdminLayout';
 import DataTable from '../../components/admin/DataTable';
 import Modal from '../../components/common/Modal';
 import Button from '../../components/common/Button';
+import ImageUpload from '../../components/common/ImageUpload';
 import { designsApi, categoriesApi, uploadApi } from '../../api';
 import { Plus, Edit2, Trash2, Sparkles, Upload, Eye } from 'lucide-react';
 import { toast } from 'react-toastify';
@@ -16,7 +17,7 @@ export const AdminDesigns = () => {
   const [editingDesign, setEditingDesign] = useState(null);
   const [saving, setSaving] = useState(false);
 
-  const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, setValue, watch, formState: { errors } } = useForm();
 
   const fetchDesigns = async () => {
     setLoading(true);
@@ -322,29 +323,25 @@ export const AdminDesigns = () => {
             />
           </div>
 
-          <div>
-            <label className="block text-xs font-medium text-espresso-800 mb-1">
-              Primary Image URL
-            </label>
-            <input
-              type="text"
-              placeholder="https://images.unsplash.com/..."
-              {...register('imageUrl')}
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-parchment-200 bg-parchment-50 text-espresso-900"
-            />
-          </div>
+          <ImageUpload
+            label="Primary Design Image"
+            value={watch('imageUrl') || ''}
+            onChange={(url) => setValue('imageUrl', url, { shouldValidate: true, shouldDirty: true })}
+            folder="designs"
+            placeholder="https://images.unsplash.com/... or upload image file"
+            helpText="Upload a photo from your device (JPG, PNG, WebP) or paste an image URL"
+            required
+          />
 
-          <div>
-            <label className="block text-xs font-medium text-espresso-800 mb-1">
-              Virtual Try-On Transparent Overlay Asset (SVG / PNG)
-            </label>
-            <input
-              type="text"
-              placeholder="/overlays/mandala-royal.svg"
-              {...register('overlayUrl')}
-              className="w-full px-3.5 py-2 text-xs rounded-xl border border-parchment-200 bg-parchment-50 text-espresso-900"
-            />
-          </div>
+          <ImageUpload
+            label="Virtual Try-On Transparent Overlay Asset (SVG / PNG)"
+            value={watch('overlayUrl') || ''}
+            onChange={(url) => setValue('overlayUrl', url, { shouldValidate: true, shouldDirty: true })}
+            folder="overlays"
+            placeholder="/overlays/mandala-royal.svg or upload overlay"
+            helpText="Upload a transparent PNG or SVG motif used in the interactive Virtual AR Try-On"
+            isOverlay
+          />
 
           <div>
             <label className="block text-xs font-medium text-espresso-800 mb-1">

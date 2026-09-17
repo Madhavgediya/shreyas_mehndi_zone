@@ -160,8 +160,8 @@ export const Home = () => {
 
                 <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-soft-lg border-4 border-white">
                   <img
-                    src="https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?auto=format&fit=crop&w=1200&q=85"
-                    alt="Royal Bridal Mehndi Art"
+                    src="/images/real/royal-bridal-hashtag-rings.jpg"
+                    alt="Royal Bridal Mehndi Art - Shreya's Mehndi Zone"
                     className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-espresso-900/70 via-transparent to-transparent" />

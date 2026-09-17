@@ -22,11 +22,11 @@ export const About = () => {
             {/* Left Image Collage */}
             <div className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-soft-lg border-4 border-white">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
-                  alt="Shreya Gediya - Mehndi Artist"
-                  className="w-full h-full object-cover"
-                />
+                  <img
+                    src="/images/real/bridal-groom-portrait-blessing.jpg"
+                    alt="Shreya Gediya - Mehndi Artistry"
+                    className="w-full h-full object-cover object-top"
+                  />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-5 rounded-3xl shadow-soft-md border border-parchment-200 hidden sm:block max-w-[220px]">
                 <span className="text-3xl font-serif font-bold text-henna-800 block">

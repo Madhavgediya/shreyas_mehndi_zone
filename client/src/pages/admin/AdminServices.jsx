@@ -3,6 +3,7 @@ import AdminLayout from '../../components/admin/AdminLayout';
 import DataTable from '../../components/admin/DataTable';
 import Modal from '../../components/common/Modal';
 import Button from '../../components/common/Button';
+import ImageUpload from '../../components/common/ImageUpload';
 import { servicesApi } from '../../api';
 import { Plus, Edit2, Trash2 } from 'lucide-react';
 import { toast } from 'react-toastify';
@@ -15,7 +16,7 @@ export const AdminServices = () => {
   const [editingService, setEditingService] = useState(null);
   const [saving, setSaving] = useState(false);
 
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, setValue, watch, formState: { errors } } = useForm();
 
   const fetchServices = async () => {
     setLoading(true);
@@ -244,17 +245,14 @@ export const AdminServices = () => {
             />
           </div>
 
-          <div>
-            <label className="block text-xs font-medium text-espresso-800 mb-1">
-              Image URL
-            </label>
-            <input
-              type="text"
-              placeholder="https://..."
-              {...register('image')}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-parchment-200 bg-parchment-50 text-espresso-900"
-            />
-          </div>
+          <ImageUpload
+            label="Service Image"
+            value={watch('image') || ''}
+            onChange={(url) => setValue('image', url, { shouldValidate: true, shouldDirty: true })}
+            folder="services"
+            placeholder="https://... or upload service image"
+            helpText="Upload a photo showcasing this service package"
+          />
 
           <label className="flex items-center gap-2 text-xs font-medium text-espresso-900 cursor-pointer pt-1">
             <input type="checkbox" {...register('active')} className="rounded" />
