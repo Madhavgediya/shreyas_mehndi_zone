@@ -73,9 +73,9 @@ CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 
 # FRONTEND CLIENT
-VITE_API_URL=http://localhost:5000/api
-VITE_WHATSAPP_NUMBER=+919876543210
-VITE_SITE_URL=http://localhost:5173
+API_URL=http://localhost:5000/api
+WHATSAPP_NUMBER=+919876543210
+SITE_URL=http://localhost:5173
 ```
 
 ### Step 3: Seed Database with Realistic Mehndi Data
@@ -172,7 +172,7 @@ shreya's-mehndi-zone/
 2. Build Command: `npm run build`
 3. Output Directory: `dist`
 4. Set Environment Variable:
-   - `VITE_API_URL`: Your deployed backend URL (e.g. `https://your-api.onrender.com/api`)
+   - `API_URL`: Your deployed backend URL (e.g. `https://your-api.onrender.com/api`)
 
 ### Backend (Render / Railway / AWS)
 1. Root Directory: `server`
