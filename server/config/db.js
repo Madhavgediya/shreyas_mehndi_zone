@@ -8,19 +8,39 @@ try {
   // Continue if dns override is unavailable
 }
 
+// Global connection caching across serverless function invocations
+let cached = global.mongoose;
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
+
 const connectDB = async () => {
-  try {
-    const connUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/shreyas_mehndi_zone';
-    const conn = await mongoose.connect(connUri, {
-      serverSelectionTimeoutMS: 5000,
+  const connUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/shreyas_mehndi_zone';
+
+  // If already connected, return cached connection
+  if (cached.conn && mongoose.connection.readyState === 1) {
+    return cached.conn;
+  }
+
+  if (!cached.promise) {
+    const opts = {
+      bufferCommands: false, // Prevents queries from hanging for 10s if connection is dropped
+      serverSelectionTimeoutMS: 8000,
+    };
+
+    cached.promise = mongoose.connect(connUri, opts).then((mongooseInstance) => {
+      console.log(`🌿 MongoDB Connected Successfully: ${mongooseInstance.connection.host}/${mongooseInstance.connection.name}`);
+      return mongooseInstance;
     });
-    console.log(`🌿 MongoDB Connected Successfully: ${conn.connection.host}/${conn.connection.name}`);
-    return conn;
+  }
+
+  try {
+    cached.conn = await cached.promise;
+    return cached.conn;
   } catch (error) {
+    cached.promise = null;
     console.error(`\n❌ MongoDB Connection Error: ${error.message}`);
-    console.log('👉 Please ensure MongoDB is running locally (e.g. mongodb://127.0.0.1:27017/shreyas_mehndi_zone)');
-    console.log('👉 Or provide a valid MONGODB_URI in your .env file.\n');
-    return null;
+    throw error;
   }
 };
 

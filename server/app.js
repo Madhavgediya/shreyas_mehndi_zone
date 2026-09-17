@@ -1,10 +1,18 @@
+const path = require('path');
+const dotenv = require('dotenv');
+
+// Load environment variables if running locally or serverless
+dotenv.config({ path: path.join(__dirname, '.env') });
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
+
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const path = require('path');
 const rateLimit = require('express-rate-limit');
 
+const mongoose = require('mongoose');
 const errorHandler = require('./middleware/errorHandler');
+const connectDB = require('./config/db');
 
 // Route imports
 const authRoutes = require('./routes/authRoutes');
@@ -58,13 +66,42 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve local static uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoint (checks DB connectivity)
+app.get('/api/health', async (req, res) => {
+  let dbStatus = 'disconnected';
+  try {
+    if (mongoose.connection.readyState === 1) {
+      dbStatus = 'connected';
+    } else {
+      await connectDB();
+      dbStatus = mongoose.connection.readyState === 1 ? 'connected' : 'connecting';
+    }
+  } catch (e) {
+    dbStatus = 'error: ' + e.message;
+  }
+
   res.status(200).json({
     success: true,
     message: "Shreya's Mehndi Zone API is running smoothly",
+    database: dbStatus,
+    mongoUriConfigured: Boolean(process.env.MONGODB_URI),
     timestamp: new Date().toISOString(),
   });
+});
+
+// Database connection middleware: ensures MongoDB is connected before handling any data requests
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error('Database connection error in request:', err.message);
+    return res.status(503).json({
+      success: false,
+      message: 'Database connection failed. Please ensure MONGODB_URI is properly set in Vercel Environment Variables and Network Access allows 0.0.0.0/0.',
+      error: err.message,
+    });
+  }
 });
 
 // API Routes

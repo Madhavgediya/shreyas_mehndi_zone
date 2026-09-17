@@ -1,12 +1,15 @@
 import axios from 'axios';
 
-const baseURL = import.meta.env.API_URL || '/api';
+// Prioritize VITE_API_URL, fallback to /api which is proxied via vercel.json in production or vite.config.js in dev
+const rawBase = import.meta.env.VITE_API_URL || import.meta.env.API_URL || '/api';
+const baseURL = rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
 
 const apiClient = axios.create({
   baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 15000,
 });
 
 // Request interceptor to add JWT token if stored
